@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* table样式 */
+*{
+margin-left:20px;
+padding:0;
+font-family:微软雅黑;
+}
+.thead{
+background:#333;
+color:#fff;
+}
+.even{
+background:#CCC;
+}
+.first, .second, .third{
+color:red;
+}
+tr:hover{
+background:#39C;	
+}
+.inputFocus{
+margin-top:50px;
+width:130px;
+}
+.inputFocus:focus{
+width:200px;	
+transition:width 1s ease-in-out 0.1s;
+}
+.animations{
+width:200px;
+height:150px;
+margin-top:50px;
+position:relative;
+overflow:hidden;	
+}
+
+#controller{
+width:70px;
+position:absolute;
+bottom:0px;
+right:0px;
+margin:0;
+z-index:5;
+}
+a{
+width:20px;
+height:20px;
+font-size:20px;
+text-decoration:none;
+display:inline-block;
+margin:0;
+line-height:20px;
+text-align:center;
+background:#CCC;
+}
+
+#banner1{z-index:1;}
+.container{
+width:200px;
+height:150px;
+display: inline-block;
+list-style: none;
+background-size:100%;
+position:absolute;
+margin:0;
+z-index:0;
+}
+#banner1{
+background-image:url(1.png);
+background-repeat:no-repeat;
+}
+#banner2{
+background-image:url(2.png);
+background-repeat:no-repeat;
+}
+#banner3{
+background-image:url(3.png);
+background-repeat:no-repeat;
+}
+#banner1:target, #banner2:target, #banner3:target{
+animation: move 1s linear 1 forwards normal; 
+}
+@keyframes move {
+  from { z-index: 1; left:-200px; }
+  to { z-index: 4;  left:0px;}
+}
