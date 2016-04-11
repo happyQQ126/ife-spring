@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:20px;
+}
+.main{
+	display:flex;
+	flex-direction:row;
+	-webkit-box-align:center;
+	justify-content:space-between;
+	-webkit-box-pack:justify;
+	-webkit-align-items:center;
+	flex-wrap:nowrap;
+}
+.box{ 
+	width:150px;
+	border:2px solid #f00;
+	display:flex;
+	
+}
+.box1{
+	height:120px;
+}
+.box2{
+	height:100px;
+}
+.box3{
+	height:40px;
+}
+.box4{
+	height:200px;
+	border:2px solid #0f0;
+}
+/*响应式布局*/
+@media screen and (max-width:640px) {
+	.main{
+	-webkit-align-items:flex-start;
+     flex-wrap:wrap;
+}
+.box4{
+	order:-1;
+}
+}
